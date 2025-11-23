@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <echo>=== СГЕНЕРИРОВАННЫЕ XML ФАЙЛЫ ===</echo>
+    <fileset id="xml.files" dir="C:\Users\p4nch\IdeaProjects\LabWork_6\target/doxygen/xml">
+      <include name="**/*.xml" />
+    </fileset>
+    <pathconvert property="xml.files.list" pathsep="&#13;&#10;   - " refid="xml.files" />
+    <echo>- ${xml.files.list}</echo>
+    <echo>Всего сгенерировано файлов: ${xml.files.count}</echo>
+  </target>
+</project>

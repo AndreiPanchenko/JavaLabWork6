@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+  <class>
+    <name>InputChecker</name>
+    <package>main.main</package>
+    <description>
+      <![CDATA[
+            Утилитарный класс для безопасного ввода данных с консоли.
+            Обеспечивает обработку ошибок и валидацию вводимых пользователем данных.
+            ]]>
+    </description>
+    <author>Лабораторная работа №6</author>
+    <version>1.0</version>
+
+    <methods>
+      <method>
+        <name>getInt</name>
+        <signature>public static int getInt(String prompt)</signature>
+        <description>
+          Запрашивает у пользователя целое число с выводом сообщения.
+        </description>
+        <parameters>
+          <parameter>
+            <name>prompt</name>
+            <type>String</type>
+            <description>Сообщение для пользователя</description>
+          </parameter>
+        </parameters>
+        <returns>Введенное целое число</returns>
+      </method>
+
+      <method>
+        <name>getInt</name>
+        <signature>public static int getInt()</signature>
+        <description>
+          Запрашивает целое число без дополнительного сообщения.
+        </description>
+        <returns>Введенное целое число</returns>
+      </method>
+
+      <method>
+        <name>getIntInRange</name>
+        <signature>public static int getIntInRange(String prompt, int min, int max)</signature>
+        <description>
+          Запрашивает целое число в заданном диапазоне.
+        </description>
+        <parameters>
+          <parameter>
+            <name>prompt</name>
+            <type>String</type>
+            <description>Сообщение для пользователя</description>
+          </parameter>
+          <parameter>
+            <name>min</name>
+            <type>int</type>
+            <description>Минимальное допустимое значение</description>
+          </parameter>
+          <parameter>
+            <name>max</name>
+            <type>int</type>
+            <description>Максимальное допустимое значение</description>
+          </parameter>
+        </parameters>
+        <returns>Введенное целое число в диапазоне [min, max]</returns>
+      </method>
+
+      <method>
+        <name>getDouble</name>
+        <signature>public static double getDouble(String prompt)</signature>
+        <description>
+          Запрашивает число с плавающей точкой с выводом сообщения.
+        </description>
+        <parameters>
+          <parameter>
+            <name>prompt</name>
+            <type>String</type>
+            <description>Сообщение для пользователя</description>
+          </parameter>
+        </parameters>
+        <returns>Введенное число double</returns>
+      </method>
+
+      <method>
+        <name>getPositiveDouble</name>
+        <signature>public static double getPositiveDouble(String prompt)</signature>
+        <description>
+          Запрашивает положительное число с плавающей точкой.
+        </description>
+        <parameters>
+          <parameter>
+            <name>prompt</name>
+            <type>String</type>
+            <description>Сообщение для пользователя</description>
+          </parameter>
+        </parameters>
+        <returns>Введенное положительное число double</returns>
+      </method>
+
+      <method>
+        <name>getString</name>
+        <signature>public static String getString(String prompt)</signature>
+        <description>
+          Запрашивает строку с выводом сообщения.
+        </description>
+        <parameters>
+          <parameter>
+            <name>prompt</name>
+            <type>String</type>
+            <description>Сообщение для пользователя</description>
+          </parameter>
+        </parameters>
+        <returns>Введенная строка</returns>
+      </method>
+
+      <method>
+        <name>getNonEmptyString</name>
+        <signature>public static String getNonEmptyString(String prompt)</signature>
+        <description>
+          Запрашивает непустую строку.
+        </description>
+        <parameters>
+          <parameter>
+            <name>prompt</name>
+            <type>String</type>
+            <description>Сообщение для пользователя</description>
+          </parameter>
+        </parameters>
+        <returns>Введенная непустая строка</returns>
+      </method>
+
+      <method>
+        <name>getDouble</name>
+        <signature>public static double getDouble()</signature>
+        <description>
+          Запрашивает число double без дополнительного сообщения.
+        </description>
+        <returns>Введенное число double</returns>
+      </method>
+
+      <method>
+        <name>getString</name>
+        <signature>public static String getString()</signature>
+        <description>
+          Запрашивает строку без дополнительного сообщения.
+        </description>
+        <returns>Введенная строка</returns>
+      </method>
+
+      <method>
+        <name>close</name>
+        <signature>public static void close()</signature>
+        <description>
+          Закрывает Scanner и освобождает ресурсы.
+        </description>
+      </method>
+    </methods>
+
+    <fields>
+      <field>
+        <name>scanner</name>
+        <type>Scanner</type>
+        <modifier>private static final</modifier>
+        <description>Единый экземпляр Scanner для всего класса</description>
+      </field>
+    </fields>
+  </class>
+</documentation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+  <class>
+    <name>CacheAndInvokeTest</name>
+    <package>test</package>
+    <description>
+      <![CDATA[
+            JUnit тесты для проверки функциональности аннотаций @Cache и @Invoke.
+            Проверяет наличие аннотаций и корректность вызова методов.
+            ]]>
+    </description>
+    <author>Лабораторная работа №6</author>
+    <version>1.0</version>
+
+    <methods>
+      <method>
+        <name>testCacheAnnotation</name>
+        <signature>public void testCacheAnnotation()</signature>
+        <description>
+          Проверяет наличие аннотации @Cache на классе и корректность её параметров.
+        </description>
+        <annotations>
+          <annotation>@Test</annotation>
+        </annotations>
+      </method>
+
+      <method>
+        <name>testInvokeMethods</name>
+        <signature>public void testInvokeMethods()</signature>
+        <description>
+          Проверяет, что методы с аннотацией @Invoke существуют и могут быть вызваны без исключений.
+        </description>
+        <annotations>
+          <annotation>@Test</annotation>
+        </annotations>
+      </method>
+
+      <method>
+        <name>runTest</name>
+        <signature>public static void runTest()</signature>
+        <description>
+          Запускает все тесты и выводит сообщение об успешном выполнении.
+        </description>
+      </method>
+    </methods>
+  </class>
+</documentation>
