@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+  <class>
+    <name>AnnotationProcessor</name>
+    <package>main.processors</package>
+    <description>
+      <![CDATA[
+            Основной процессор для обработки пользовательских аннотаций.
+            Содержит статические методы для анализа и выполнения действий
+            на основе различных аннотаций.
+            ]]>
+    </description>
+    <author>Лабораторная работа №6</author>
+    <version>1.0</version>
+
+    <methods>
+      <method>
+        <name>processInvoke</name>
+        <signature>public static void processInvoke(Object obj)</signature>
+        <description>
+          <![CDATA[
+                    Обрабатывает аннотацию @Invoke, автоматически вызывая все методы,
+                    помеченные этой аннотацией в переданном объекте.
+                    ]]>
+        </description>
+        <parameters>
+          <parameter>
+            <name>obj</name>
+            <type>Object</type>
+            <description>Объект, методы которого нужно обработать</description>
+          </parameter>
+        </parameters>
+        <exceptions>
+          <exception>
+            <type>Exception</type>
+            <description>При ошибках рефлексии или вызова методов</description>
+          </exception>
+        </exceptions>
+      </method>
+
+      <method>
+        <name>processDefault</name>
+        <signature>public static void processDefault(Class&lt;?&gt; clazz)</signature>
+        <description>
+          Обрабатывает аннотацию @Default на уровне класса.
+        </description>
+        <parameters>
+          <parameter>
+            <name>clazz</name>
+            <type>Class&lt;?&gt;</type>
+            <description>Класс для анализа аннотации @Default</description>
+          </parameter>
+        </parameters>
+      </method>
+
+      <method>
+        <name>processToString</name>
+        <signature>public static String processToString(Object obj)</signature>
+        <description>
+          Генерирует строковое представление объекта на основе аннотации @ToString.
+        </description>
+        <parameters>
+          <parameter>
+            <name>obj</name>
+            <type>Object</type>
+            <description>Объект для преобразования в строку</description>
+          </parameter>
+        </parameters>
+        <returns>Строковое представление объекта</returns>
+      </method>
+
+      <method>
+        <name>processValidate</name>
+        <signature>public static void processValidate(Class&lt;?&gt; clazz)</signature>
+        <description>
+          Обрабатывает аннотацию @Validate и выводит информацию о классах для валидации.
+        </description>
+        <parameters>
+          <parameter>
+            <name>clazz</name>
+            <type>Class&lt;?&gt;</type>
+            <description>Класс для анализа аннотации @Validate</description>
+          </parameter>
+        </parameters>
+      </method>
+
+      <method>
+        <name>processTwo</name>
+        <signature>public static void processTwo(Class&lt;?&gt; clazz)</signature>
+        <description>
+          Обрабатывает аннотацию @Two и выводит значения её параметров.
+        </description>
+        <parameters>
+          <parameter>
+            <name>clazz</name>
+            <type>Class&lt;?&gt;</type>
+            <description>Класс для анализа аннотации @Two</description>
+          </parameter>
+        </parameters>
+      </method>
+
+      <method>
+        <name>processCache</name>
+        <signature>public static void processCache(Class&lt;?&gt; clazz)</signature>
+        <description>
+          Обрабатывает аннотацию @Cache и выводит информацию об областях кеширования.
+        </description>
+        <parameters>
+          <parameter>
+            <name>clazz</name>
+            <type>Class&lt;?&gt;</type>
+            <description>Класс для анализа аннотации @Cache</description>
+          </parameter>
+        </parameters>
+      </method>
+    </methods>
+  </class>
+</documentation>

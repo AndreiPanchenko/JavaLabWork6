@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+  <annotation>
+    <name>Default</name>
+    <package>main.annotations</package>
+    <description>
+      <![CDATA[
+            Аннотация для указания классов по умолчанию.
+            Может применяться как к типам (классам), так и к полям.
+            ]]>
+    </description>
+    <target>TYPE, FIELD</target>
+    <retention>RUNTIME</retention>
+    <author>Лабораторная работа №6</author>
+    <version>1.0</version>
+
+    <elements>
+      <element>
+        <name>value</name>
+        <type>Class&lt;?&gt;</type>
+        <description>Класс, указанный в качестве значения по умолчанию</description>
+      </element>
+    </elements>
+
+    <usage>
+      <example>
+        <code>
+          @Default(String.class)
+          public class MyClass {
+          @Default(Integer.class)
+          private String field;
+          }
+        </code>
+      </example>
+    </usage>
+
+    <see-also>
+      <class>AnnotationProcessor</class>
+      <method>processDefault</method>
+    </see-also>
+  </annotation>
+</documentation>

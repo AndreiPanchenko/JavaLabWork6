@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+  <class>
+    <name>ClassWithCache</name>
+    <package>main.entities</package>
+    <description>
+      <![CDATA[
+            Демонстрационный класс с аннотацией @Cache и методами,
+            аннотированными @Invoke. Реализует простую систему кеширования.
+            ]]>
+    </description>
+    <author>Лабораторная работа №6</author>
+    <version>1.0</version>
+    <annotations>
+      <annotation>@Cache({"users", "sweets", "products"})</annotation>
+    </annotations>
+
+    <methods>
+      <method>
+        <name>initializeCache</name>
+        <signature>public void initializeCache()</signature>
+        <description>
+          Метод для инициализации кеша, аннотированный @Invoke. Добавляет начальные данные в кеш.
+        </description>
+        <annotations>
+          <annotation>@Invoke</annotation>
+        </annotations>
+      </method>
+
+      <method>
+        <name>clearCache</name>
+        <signature>public void clearCache()</signature>
+        <description>
+          Метод для очистки кеша, аннотированный @Invoke. Удаляет все данные из кеша.
+        </description>
+        <annotations>
+          <annotation>@Invoke</annotation>
+        </annotations>
+      </method>
+
+      <method>
+        <name>addToCache</name>
+        <signature>public void addToCache(String key, Object value)</signature>
+        <description>
+          Добавляет значение в кеш по указанному ключу.
+        </description>
+        <parameters>
+          <parameter>
+            <name>key</name>
+            <type>String</type>
+            <description>Ключ для сохранения значения</description>
+          </parameter>
+          <parameter>
+            <name>value</name>
+            <type>Object</type>
+            <description>Значение для кеширования</description>
+          </parameter>
+        </parameters>
+      </method>
+
+      <method>
+        <name>getFromCache</name>
+        <signature>public Object getFromCache(String key)</signature>
+        <description>
+          Возвращает значение из кеша по указанному ключу.
+        </description>
+        <parameters>
+          <parameter>
+            <name>key</name>
+            <type>String</type>
+            <description>Ключ для поиска значения</description>
+          </parameter>
+        </parameters>
+        <returns>Значение, связанное с ключом, или null если ключ не найден</returns>
+      </method>
+    </methods>
+
+    <fields>
+      <field>
+        <name>cache</name>
+        <type>Map&lt;String, Object&gt;</type>
+        <modifier>private</modifier>
+        <description>Внутренняя карта для хранения кешированных данных</description>
+      </field>
+    </fields>
+  </class>
+</documentation>

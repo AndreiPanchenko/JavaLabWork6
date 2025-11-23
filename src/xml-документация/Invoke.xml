@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+  <annotation>
+    <name>Invoke</name>
+    <package>main.annotations</package>
+    <description>
+      <![CDATA[
+            Аннотация для标记 методов, которые должны быть автоматически вызваны
+            при обработке класса процессором аннотаций.
+            ]]>
+    </description>
+    <target>METHOD</target>
+    <retention>RUNTIME</retention>
+    <author>Лабораторная работа №6</author>
+    <version>1.0</version>
+
+    <usage>
+      <example>
+        <code>
+          @Invoke
+          public void myMethod() {
+          // Этот метод будет автоматически вызван
+          }
+        </code>
+      </example>
+    </usage>
+
+    <see-also>
+      <class>AnnotationProcessor</class>
+      <method>processInvoke</method>
+    </see-also>
+  </annotation>
+</documentation>

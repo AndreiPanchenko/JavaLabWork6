@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+  <annotation>
+    <name>Two</name>
+    <package>main.annotations</package>
+    <description>
+      <![CDATA[
+            Аннотация с двумя обязательными параметрами для демонстрации
+            работы с аннотациями, имеющими несколько значений.
+            ]]>
+    </description>
+    <target>TYPE</target>
+    <retention>RUNTIME</retention>
+    <author>Лабораторная работа №6</author>
+    <version>1.0</version>
+
+    <elements>
+      <element>
+        <name>first</name>
+        <type>String</type>
+        <description>Строковое значение первого параметра</description>
+      </element>
+      <element>
+        <name>second</name>
+        <type>int</type>
+        <description>Целочисленное значение второго параметра</description>
+      </element>
+    </elements>
+
+    <usage>
+      <example>
+        <code>
+          @Two(first = "Hello", second = 42)
+          public class MyClass {
+          // Класс с аннотацией Two
+          }
+        </code>
+      </example>
+    </usage>
+
+    <see-also>
+      <class>AnnotationProcessor</class>
+      <method>processTwo</method>
+    </see-also>
+  </annotation>
+</documentation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+  <class>
+    <name>ClassWithTwo</name>
+    <package>main.entities</package>
+    <description>
+      <![CDATA[
+            Демонстрационный класс с аннотацией @Two, содержащей два параметра.
+            Используется для тестирования обработки аннотаций с несколькими значениями.
+            ]]>
+    </description>
+    <author>Лабораторная работа №6</author>
+    <version>1.0</version>
+    <annotations>
+      <annotation>@Two(first = "Hello friend :)", second = 52)</annotation>
+    </annotations>
+
+    <constructors>
+      <constructor>
+        <signature>public ClassWithTwo()</signature>
+        <description>Конструктор по умолчанию, инициализирующий сообщение</description>
+      </constructor>
+    </constructors>
+
+    <fields>
+      <field>
+        <name>message</name>
+        <type>String</type>
+        <modifier>private</modifier>
+        <description>Сообщение, описывающее назначение класса</description>
+      </field>
+    </fields>
+  </class>
+</documentation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+  <annotation>
+    <name>Cache</name>
+    <package>main.annotations</package>
+    <description>
+      <![CDATA[
+            Аннотация для классов, которые поддерживают кеширование данных.
+            Позволяет указать области (зоны) кеширования.
+            ]]>
+    </description>
+    <target>TYPE</target>
+    <retention>RUNTIME</retention>
+    <author>Лабораторная работа №6</author>
+    <version>1.0</version>
+
+    <elements>
+      <element>
+        <name>value</name>
+        <type>String[]</type>
+        <default>empty array</default>
+        <description>Массив строк, представляющих области кеширования</description>
+      </element>
+    </elements>
+
+    <usage>
+      <example>
+        <code>
+          @Cache({"users", "products", "orders"})
+          public class MyService {
+          // Класс с кешированием в указанных областях
+          }
+        </code>
+      </example>
+    </usage>
+
+    <see-also>
+      <class>AnnotationProcessor</class>
+      <method>processCache</method>
+    </see-also>
+  </annotation>
+</documentation>
