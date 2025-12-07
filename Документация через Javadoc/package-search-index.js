@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"annotations"},{"l":"entities"},{"l":"main"},{"l":"processors"}];updateSearchResults();
